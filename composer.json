@@ -1,0 +1,21 @@
+{
+    "name": "eiriksm/dtt-auto-screenshot-on-fail",
+    "description": "Take a screenshot automatically if tests fails",
+    "type": "library",
+    "license": "GPL-2.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "eiriksm\\DttAutoScreenshotOnFail\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Eirik S. Morland",
+            "email": "eirik@morland.no"
+        }
+    ],
+    "require-dev": {
+        "weitzman/drupal-test-traits": "^2.5",
+        "phpunit/phpunit": "^9"
+    }
+}
