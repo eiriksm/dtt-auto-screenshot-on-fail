@@ -8,6 +8,11 @@
             "eiriksm\\DttAutoScreenshotOnFail\\": "src/"
         }
     },
+    "scripts": {
+        "test": "@composer phpcs && composer run phpstan",
+        "phpstan": "phpstan analyse src",
+        "phpcs": "phpcs src"
+    },
     "authors": [
         {
             "name": "Eirik S. Morland",
@@ -16,6 +21,13 @@
     ],
     "require-dev": {
         "weitzman/drupal-test-traits": "^2.5",
-        "phpunit/phpunit": "^9"
+        "phpunit/phpunit": "^8 || ^9",
+        "slevomat/coding-standard": "^8.15",
+        "phpstan/phpstan": "^2.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }
