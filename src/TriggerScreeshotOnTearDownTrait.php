@@ -7,12 +7,16 @@ trait TriggerScreeshotOnTearDownTrait
 
     public function saveScreenshotIfTestFailed() : void
     {
-      // For phpunit <= 9:
         if (method_exists($this, 'hasFailed')) {
-            if ($this->hasFailed()) {
-                $this->captureScreenshot();
-                $this->capturePageContent();
-            }
+            // For phpunit <= 9:
+            $has_failed = $this->hasFailed();
+        } else {
+            // For phpunit >= 10:
+            $has_failed = $this->status()->isFailure() || $this->status()->isError();
+        }
+        if ($has_failed) {
+            $this->captureScreenshot();
+            $this->capturePageContent();
         }
     }
 }
