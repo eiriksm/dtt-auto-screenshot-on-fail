@@ -19,6 +19,8 @@ jobs:
         phpunit:
           - "^8"
           - "^9"
+          - "^10"
+          - "^11"
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
