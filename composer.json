@@ -21,7 +21,7 @@
     ],
     "require-dev": {
         "weitzman/drupal-test-traits": "^2.5",
-        "phpunit/phpunit": "^8 || ^9" || ^11,
+        "phpunit/phpunit": "^8 || ^9" || ^10 || ^11",
         "slevomat/coding-standard": "^8.15",
         "phpstan/phpstan": "^2.1"
     },
