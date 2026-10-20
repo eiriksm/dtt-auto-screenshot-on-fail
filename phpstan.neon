@@ -2,6 +2,11 @@ parameters:
     level: max
     paths:
       - src
-
-includes:
-    - phpstan-baseline.neon
+    # The code checks for methods that only exist in some versions of PHPUnit,
+    # so depending on the installed version, some of these checks will always
+    # be true.
+    reportUnmatchedIgnoredErrors: false
+    ignoreErrors:
+      -
+        identifier: function.alreadyNarrowedType
+        path: src/*
